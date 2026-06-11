@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth dark">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0f172a">
-    <title>Financiacion Hipoteca — Tu hipoteca inteligente</title>
-    <meta name="description" content="Especialistas en conseguir hasta el 100% de financiación. Estudios de viabilidad gratuitos y mejora de hipotecas. Lee nuestras guías financieras.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bróker Hipotecario | Consigue tu Hipoteca al 100% | Financiación Hipoteca</title>
+    <meta name="description" content="¿Buscas la mejor hipoteca? Negociamos con todos los bancos por ti. Estudio de viabilidad 100% gratuito. Especialistas en hipotecas al 100% y mejora de condiciones. Llámanos: 678 65 29 25.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://gestorescom.es/">
+    <link rel="canonical" href="https://www.gestorescom.es/">
+    <meta property="og:title" content="Bróker Hipotecario | Hipoteca al 100% | Financiación Hipoteca">
+    <meta property="og:description" content="Negociamos la mejor hipoteca por ti. Estudio gratuito sin compromiso. Especialistas en financiación al 100%.">
+    <meta property="og:url" content="https://www.gestorescom.es/">
+    <meta property="og:type" content="website">
+    <meta name="geo.region" content="ES-MD">
+    <meta name="geo.placename" content="Móstoles, Madrid">
+    <meta name="keywords" content="broker hipotecario, hipoteca 100%, mejor hipoteca, negociar hipoteca, asesor hipotecario madrid, hipoteca sin ahorros, mejora hipoteca, financiación vivienda">
+    <meta name="author" content="Financiación Hipoteca">
+    <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="mD3vPT4aGSjpgXxh0_73sXYh_ixAqe3Im0V2TiFvCRU" />
     
-    <!-- Schema.org estructurado para SEO (Artículos y Entidad Local) -->
+    <!-- Schema.org estructurado para SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -20,7 +28,16 @@
           "name": "Financiación Hipoteca",
           "description": "Intermediación para conseguir hasta el 100% de financiación hipotecaria.",
           "telephone": "+34-678-652-925",
-          "email": "dsanz@gestorescom.es"
+          "email": "dsanz@gestorescom.es",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle Magnolio 7",
+            "addressLocality": "Móstoles",
+            "addressRegion": "Madrid",
+            "addressCountry": "ES"
+          },
+          "areaServed": "España",
+          "url": "https://www.gestorescom.es"
         },
         {
           "@type": "BlogPosting",
@@ -40,60 +57,69 @@
       ]
     }
     </script>
-    <!-- Tailwind CSS (built locally — see tailwind.config.js, rebuild with: npx tailwindcss -i input.css -o tailwind.css --minify) -->
-    <link rel="stylesheet" href="./tailwind.css">
-    <!-- Fonts: preconnect first so the request starts in parallel with HTML parsing -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-      /* Base Dark Theme */
-      html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-      body { background-color: #0f172a; color: #f8fafc; font-family: 'Outfit', sans-serif; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; }
-      /* Glassmorphism (iOS Safari needs the -webkit- prefix or the blur silently fails and the panel looks solid) */
-      .glass { background: rgba(30, 41, 59, 0.7); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-      /* Fallback if backdrop-filter unsupported (older Android browsers) — make the glass opaque enough to be readable */
-      @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
-        .glass { background: rgba(15, 23, 42, 0.92); }
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              heading: ['Playfair Display', 'serif'],
+              sans: ['Inter', 'sans-serif']
+            },
+            colors: {
+              navy: { 50: '#f0f4f8', 100: '#d9e2ec', 200: '#bcccdc', 300: '#9fb3c8', 400: '#829ab1', 500: '#627d98', 600: '#486581', 700: '#334e68', 800: '#243b53', 900: '#102a43' },
+              gold: { 50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d', 400: '#f6c547', 500: '#c8a45c', 600: '#b8922e', 700: '#92702a', 800: '#6b531e', 900: '#4a3810' },
+              cream: '#fdfbf7',
+              warmwhite: '#faf8f3'
+            }
+          }
+        }
       }
-      .bento-card { background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%); border: 1px solid rgba(56, 189, 248, 0.1); border-radius: 1.5rem; transition: all 0.3s ease; }
-      .bento-card:hover { border-color: rgba(56, 189, 248, 0.5); transform: translateY(-3px); box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2); }
-      /* Carousel */
-      .carousel-item { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease-in-out; z-index: 0; }
+    </script>
+
+    <style>
+      body { font-family: 'Inter', sans-serif; background-color: #fdfbf7; color: #102a43; }
+      h1, h2, h3, .font-heading { font-family: 'Playfair Display', serif; }
+      .carousel-item { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease-in-out; z-index: 0; }
       .carousel-item.active { opacity: 1; z-index: 1; }
       .carousel-content { position: relative; z-index: 10; }
-      .hero-gradient { background: linear-gradient(to top, #0f172a 0%, transparent 100%); }
-      /* Custom input */
-      input, textarea { background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255,255,255,0.2); color: white; }
-      input:focus, textarea:focus { outline: none; border-color: #38bdf8; box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2); }
-      /* Animated Button */
-      .btn-glow { position: relative; overflow: hidden; }
-      .btn-glow::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(rgba(255,255,255,0.2), transparent, rgba(255,255,255,0.2)); transform: rotate(45deg); transition: all 0.3s; opacity: 0; }
-      .btn-glow:hover::after { opacity: 1; animation: glow 1s infinite linear; }
-      @keyframes glow { 0% { transform: translateY(-50%) rotate(45deg); } 100% { transform: translateY(50%) rotate(45deg); } }
-      .modal { display: none; } .modal.open { display: flex; }
-      /* Use dynamic viewport height on browsers that support it (iOS Safari, Chrome) so the hero
-         doesn't get pushed under the URL bar. Falls back to 100vh elsewhere. */
-      @supports (height: 100dvh) {
-        .hero-section { min-height: 100dvh; }
-      }
-      /* Mobile-only tweaks */
-      @media (max-width: 640px) {
-        /* Prevent horizontal scrolling caused by blur halos / large rounded blobs */
-        html, body { overflow-x: hidden; }
-        /* Slightly tighter selection of headings — Tailwind 4xl is enough on phones */
-        .hero-title { font-size: clamp(2rem, 8.5vw, 2.75rem); line-height: 1.15; }
-        /* Make tap targets meet 44px guideline */
-        button, a.btn-glow, .modal button { min-height: 44px; }
-        /* Safe-area handling for iPhones with notch / Dynamic Island */
-        nav.fixed { padding-top: env(safe-area-inset-top); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
-        #cookies-banner { margin-bottom: env(safe-area-inset-bottom); }
-      }
-      /* Inputs at 16px+ so iOS Safari doesn't zoom in on focus */
-      input, textarea, select { font-size: 16px; }
+      .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+      .img-section { background-attachment: fixed; background-size: cover; background-position: center; }
+      @media (max-width: 768px) { .img-section { background-attachment: scroll; } }
+      .service-card { background: white; border-radius: 1.5rem; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); transition: all 0.4s ease; border: 1px solid rgba(0,0,0,0.04); }
+      .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+      .service-card:hover .service-img { transform: scale(1.05); }
+      .service-img { transition: transform 0.6s ease; }
+      .blog-card { background: white; border-radius: 1.5rem; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); transition: all 0.4s ease; border: 1px solid rgba(0,0,0,0.04); }
+      .blog-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(0,0,0,0.1); }
+      .blog-card:hover .blog-img { transform: scale(1.08); }
+      .blog-img { transition: transform 0.7s ease; }
+      .compare-card { border-radius: 1.5rem; overflow: hidden; transition: all 0.3s ease; }
+      .faq-item { border-bottom: 1px solid #e2e8f0; }
+      .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+      .faq-item.open .faq-answer { max-height: 500px; padding-top: 1rem; padding-bottom: 1rem; }
+      .faq-item.open .faq-arrow { transform: rotate(180deg); }
+      .faq-arrow { transition: transform 0.3s ease; }
+      input, textarea { background: #f7f5f0; border: 2px solid #e2e8f0; color: #102a43; border-radius: 1rem; transition: all 0.3s ease; }
+      input:focus, textarea:focus { outline: none; border-color: #c8a45c; box-shadow: 0 0 0 4px rgba(200,164,92,0.15); background: white; }
+      .btn-primary { background: linear-gradient(135deg, #c8a45c, #b8922e); color: white; font-weight: 700; border-radius: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(200,164,92,0.3); }
+      .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,164,92,0.4); }
+      .btn-outline { border: 2px solid #c8a45c; color: #c8a45c; font-weight: 700; border-radius: 1rem; transition: all 0.3s ease; }
+      .btn-outline:hover { background: #c8a45c; color: white; transform: translateY(-2px); }
+      .modal { display: none; }
+      .modal.open { display: flex; }
+      .nav-glass { background: rgba(253, 251, 247, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+      .gold-line { width: 60px; height: 4px; background: linear-gradient(90deg, #c8a45c, #f6c547); border-radius: 2px; }
     </style>
 </head>
-<body class="antialiased selection:bg-brand-500 selection:text-white">
+<body class="antialiased">
 
     <!-- Favicon Script -->
     <script>
@@ -101,18 +127,19 @@
             const canvas = document.createElement("canvas");
             canvas.width = 64; canvas.height = 64;
             const ctx = canvas.getContext("2d");
-            ctx.fillStyle = "#38bdf8";
+            ctx.fillStyle = "#102a43";
             ctx.beginPath();
-            ctx.moveTo(8, 0); ctx.lineTo(56, 0); ctx.quadraticCurveTo(64, 0, 64, 8);
-            ctx.lineTo(64, 56); ctx.quadraticCurveTo(64, 64, 56, 64);
-            ctx.lineTo(8, 64); ctx.quadraticCurveTo(0, 64, 0, 0, 56);
-            ctx.lineTo(0, 8); ctx.quadraticCurveTo(0, 0, 8, 0);
-            ctx.fill();
+            ctx.moveTo(12, 0); ctx.lineTo(52, 0); ctx.quadraticCurveTo(64, 0, 64, 12);
+            ctx.lineTo(64, 52); ctx.quadraticCurveTo(64, 64, 52, 64);
+            ctx.lineTo(12, 64); ctx.quadraticCurveTo(0, 64, 0, 52);
+            ctx.lineTo(0, 12); ctx.quadraticCurveTo(0, 0, 12, 0);
+            ctx.closePath(); ctx.fill();
+            ctx.fillStyle = "#c8a45c";
+            ctx.fillRect(8, 52, 48, 4);
             ctx.fillStyle = "#ffffff";
-            ctx.font = "bold 32px Outfit, sans-serif";
-            ctx.textAlign = "center";
-            ctx.textBaseline = "middle";
-            ctx.fillText("FH", 32, 36);
+            ctx.font = "bold 30px Inter, sans-serif";
+            ctx.textAlign = "center"; ctx.textBaseline = "middle";
+            ctx.fillText("FH", 32, 28);
             const link = document.createElement("link");
             link.rel = "icon"; link.type = "image/png"; link.href = canvas.toDataURL("image/png");
             document.head.appendChild(link);
@@ -120,17 +147,17 @@
     </script>
 
     <!-- Header -->
-    <nav class="fixed w-full z-50 glass border-b border-white/10">
+    <nav class="fixed w-full z-50 nav-glass">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 sm:h-20">
-                <div class="flex items-center gap-3 min-w-0">
-                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-brand-500 flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg shadow-brand-500/30 shrink-0">FH</div>
-                    <span class="font-bold text-xl tracking-tight hidden sm:block truncate">Financiación Hipoteca</span>
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-navy-900 flex items-center justify-center font-bold text-lg text-white shadow-md">FH</div>
+                    <span class="font-heading font-bold text-xl tracking-tight text-navy-900 hidden sm:block">Financiación Hipoteca</span>
                 </div>
-                <div class="flex items-center gap-4">
-                    <span class="text-sm text-gray-400 hidden md:block">Expertos Independientes</span>
-                    <a href="tel:+34678652925" class="font-bold text-base sm:text-lg hover:text-brand-400 transition cursor-pointer whitespace-nowrap">
-                        📞 678 65 29 25
+                <div class="flex items-center gap-6">
+                    <span class="text-sm text-navy-500 font-medium hidden md:block">Expertos Independientes</span>
+                    <a href="tel:+34678652925" class="font-bold text-lg text-navy-900 hover:text-gold-600 transition cursor-pointer flex items-center gap-2" onclick="if(typeof gtag === 'function') gtag('event', 'llamada_telefono', { 'event_category': 'Leads', 'event_label': 'Cabecera' });">
+                        <span class="text-gold-500">📞</span> 678 65 29 25
                     </a>
                 </div>
             </div>
@@ -138,229 +165,338 @@
     </nav>
 
     <!-- Hero Carousel -->
-    <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden py-24 sm:py-0">
-        <!-- Carousel Backgrounds -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div id="carousel" class="absolute inset-0">
             <div class="carousel-item active" style="background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=2000') center/cover;"></div>
             <div class="carousel-item" style="background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000') center/cover;"></div>
             <div class="carousel-item" style="background: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=2000') center/cover;"></div>
         </div>
-        <!-- Gradient Overlay -->
-        <div class="absolute inset-0 bg-slate-900/70 hero-gradient"></div>
-
+        <div class="absolute inset-0 bg-gradient-to-b from-white/40 via-white/20 to-white/70"></div>
         <div class="carousel-content text-center px-4 max-w-4xl mx-auto mt-16">
-            <div id="hero-texts" class="min-h-[120px] sm:min-h-[160px] flex items-center justify-center mb-5 sm:mb-6">
-                <h1 class="hero-title text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight slide-text opacity-100 transition-opacity duration-500">
-                    Consigue hasta el <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-blue-600">100%</span> de tu hipoteca.
+            <div class="mb-4">
+                <span class="inline-block px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-semibold text-navy-800 shadow-sm border border-white/50">🏠 Tu nueva casa, más cerca de lo que imaginas</span>
+            </div>
+            <div id="hero-texts" class="min-h-[120px] flex items-center justify-center mb-6">
+                <h1 class="font-heading text-5xl md:text-7xl font-bold tracking-tight leading-tight slide-text opacity-100 transition-opacity duration-500 text-navy-900">
+                    Consigue hasta el <span class="text-gold-600">100%</span> de tu hipoteca.
                 </h1>
             </div>
-            <p class="text-base sm:text-xl text-gray-300 mb-8 sm:mb-10 px-2">Negociamos por ti para que consigas las mejores condiciones, sin estrés y sin letra pequeña.</p>
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center">
-                <a href="#contacto" class="btn-glow px-6 sm:px-8 py-3.5 sm:py-4 bg-brand-500 hover:bg-brand-600 text-white rounded-full font-bold text-base sm:text-lg shadow-lg shadow-brand-500/30 transform hover:-translate-y-1 transition-all">
-                    Simular mi hipoteca
-                </a>
-                <a href="https://wa.me/34678652925" target="_blank" class="px-6 sm:px-8 py-3.5 sm:py-4 glass text-white rounded-full font-bold text-base sm:text-lg hover:bg-white/10 transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
-                    <span>WhatsApp directo</span>
-                </a>
+            <p class="text-xl text-navy-700 mb-10 max-w-2xl mx-auto">Negociamos por ti para que consigas las mejores condiciones, sin estrés y sin letra pequeña.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contacto" class="btn-primary px-8 py-4 text-lg shadow-xl">Simular mi hipoteca</a>
+                <a href="https://wa.me/34678652925" target="_blank" class="btn-outline px-8 py-4 text-lg flex items-center gap-2 bg-white" onclick="if(typeof gtag === 'function') gtag('event', 'clic_whatsapp', { 'event_category': 'Leads', 'event_label': 'Cabecera' });">💬 WhatsApp directo</a>
             </div>
         </div>
     </section>
 
-    <!-- Servicios Bento Box -->
-    <section class="py-16 sm:py-24 bg-dark-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 sm:mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Servicios exclusivos</h2>
-                <p class="text-gray-400 text-base sm:text-lg">Un ecosistema financiero diseñado para ti.</p>
-            </div>
+    <!-- Imagen decorativa -->
+    <div class="img-section h-64 md:h-80" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973e86c0c2db?auto=format&fit=crop&q=80&w=2000');">
+        <div class="h-full bg-white/30 backdrop-blur-[1px]"></div>
+    </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-                <!-- Gran caja -->
-                <div class="bento-card p-6 sm:p-10 md:col-span-2 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-2xl group-hover:bg-brand-500/20 transition"></div>
-                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-brand-500/20 flex items-center justify-center text-brand-400 text-2xl mb-5 sm:mb-6 relative z-10">📊</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 relative z-10">Estudio de viabilidad gratuito</h3>
-                    <p class="text-gray-400 text-base sm:text-lg relative z-10">Analizamos tu perfil financiero con herramientas avanzadas sin ningún coste ni compromiso inicial. Claridad desde el minuto uno.</p>
+    <!-- Servicios -->
+    <section class="py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4 text-navy-900">Servicios de intermediación financiera</h2>
+                <p class="text-navy-500 text-lg">Un ecosistema financiero diseñado para ti.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card reveal">
+                    <div class="h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=800" alt="Consultor financiero analizando viabilidad hipotecaria" class="service-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-full bg-gold-50 flex items-center justify-center text-2xl mb-4">📊</div>
+                        <h3 class="font-heading text-xl font-bold mb-3 text-navy-900">Estudio de viabilidad gratuito</h3>
+                        <p class="text-navy-500 leading-relaxed">Analizamos tu perfil financiero con herramientas avanzadas sin ningún coste. Claridad desde el minuto uno.</p>
+                    </div>
                 </div>
-                <!-- Cajas pequeñas -->
-                <div class="bento-card p-6 sm:p-8">
-                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-brand-500/20 flex items-center justify-center text-brand-400 text-2xl mb-5 sm:mb-6">💯</div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-3">Hipotecas al 100%</h3>
-                    <p class="text-gray-400">Accede a financiación total en función de tu perfil. Encontramos el banco que dice que sí.</p>
+                <div class="service-card reveal">
+                    <div class="h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800" alt="Familia consiguiendo hipoteca al 100% de financiación" class="service-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-full bg-gold-50 flex items-center justify-center text-2xl mb-4">💯</div>
+                        <h3 class="font-heading text-xl font-bold mb-3 text-navy-900">Hipotecas al 100%</h3>
+                        <p class="text-navy-500 leading-relaxed">Accede a financiación total en función de tu perfil experto.</p>
+                    </div>
                 </div>
-                <div class="bento-card p-6 sm:p-8">
-                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-brand-500/20 flex items-center justify-center text-brand-400 text-2xl mb-5 sm:mb-6">🤝</div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-3">Negociación bancaria</h3>
-                    <p class="text-gray-400">Mejores tipos de interés y condiciones que no conseguirías como particular.</p>
+                <div class="service-card reveal">
+                    <div class="h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800" alt="Asesor hipotecario negociando condiciones con entidades bancarias" class="service-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-full bg-gold-50 flex items-center justify-center text-2xl mb-4">🤝</div>
+                        <h3 class="font-heading text-xl font-bold mb-3 text-navy-900">Negociación bancaria</h3>
+                        <p class="text-navy-500 leading-relaxed">Mejores tipos de interés y condiciones que no conseguirías como particular.</p>
+                    </div>
                 </div>
-                <div class="bento-card p-6 sm:p-10 md:col-span-2 relative overflow-hidden group">
-                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-brand-400/10 rounded-full blur-2xl group-hover:bg-brand-400/20 transition"></div>
-                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-brand-500/20 flex items-center justify-center text-brand-400 text-2xl mb-5 sm:mb-6 relative z-10">📈</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 relative z-10">Mejora de tu hipoteca actual</h3>
-                    <p class="text-gray-400 text-base sm:text-lg relative z-10">Revisamos tus condiciones actuales. Si hay opciones de subrogación para ahorrar dinero mes a mes, las ejecutamos.</p>
+                <div class="service-card reveal md:col-span-2 lg:col-span-1">
+                    <div class="h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Cliente mejorando condiciones de su hipoteca actual mediante subrogación" class="service-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-full bg-gold-50 flex items-center justify-center text-2xl mb-4">📈</div>
+                        <h3 class="font-heading text-xl font-bold mb-3 text-navy-900">Mejora de tu hipoteca actual</h3>
+                        <p class="text-navy-500 leading-relaxed">Revisamos tus condiciones actuales. Si hay opciones de subrogación para ahorrar dinero mes a mes, las ejecutamos.</p>
+                    </div>
+                </div>
+                <div class="service-card reveal md:col-span-2">
+                    <div class="md:flex">
+                        <div class="h-52 md:h-auto md:w-2/5 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Asesoramiento hipotecario personalizado desde el estudio hasta la firma en notaría" class="service-img w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:w-3/5 flex flex-col justify-center">
+                            <div class="w-12 h-12 rounded-full bg-gold-50 flex items-center justify-center text-2xl mb-4">🎯</div>
+                            <h3 class="font-heading text-2xl font-bold mb-3 text-navy-900">Asesoramiento personalizado</h3>
+                            <p class="text-navy-500 leading-relaxed text-lg">No somos un call center. Cada caso es único y merece una estrategia a medida. Te acompañamos desde el primer análisis hasta la firma en la notaría.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imagen decorativa -->
+    <div class="img-section h-64 md:h-96" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000');">
+        <div class="h-full bg-navy-900/50 flex items-center justify-center">
+            <p class="font-heading text-3xl md:text-5xl font-bold text-white text-center px-8 max-w-3xl drop-shadow-lg">Más de 15 años haciendo posible lo que tu banco te dice que no</p>
+        </div>
+    </div>
+
+    <!-- Proceso 4 pasos -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4 text-navy-900">Así funciona</h2>
+                <p class="text-navy-500 text-lg">Un proceso sencillo y transparente, diseñado para que tú no te preocupes de nada.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 rounded-full bg-navy-900 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">1</div>
+                    <h3 class="font-heading text-xl font-bold mb-3 text-navy-900">Estudio gratuito</h3>
+                    <p class="text-navy-500">Nos cuentas tu situación y analizamos tu viabilidad sin compromiso.</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 rounded-full bg-navy-800 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">2</div>
+                    <h3 class="font-heading text-xl font-bold mb-3 text-navy-900">Negociamos por ti</h3>
+                    <p class="text-navy-500">Contactamos con múltiples entidades y luchamos por las mejores condiciones.</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 rounded-full bg-navy-700 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">3</div>
+                    <h3 class="font-heading text-xl font-bold mb-3 text-navy-900">Eliges tu hipoteca</h3>
+                    <p class="text-navy-500">Te presentamos las mejores ofertas y tú decides cuál encaja contigo.</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg shadow-gold-500/30">4</div>
+                    <h3 class="font-heading text-xl font-bold mb-3 text-navy-900">¡Firma en la notaría!</h3>
+                    <p class="text-navy-500">Te acompañamos hasta el final. Las llaves de tu casa, en tu mano.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Comparativa -->
-    <section class="py-16 sm:py-24 bg-dark-800 border-y border-white/5">
+    <section class="py-24 bg-warmwhite">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 sm:mb-16">La diferencia es clara</h2>
-            <div class="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
-                <div class="bento-card p-6 sm:p-10 border-red-500/20 opacity-80 hover:opacity-100">
-                    <h3 class="text-xl sm:text-2xl font-bold text-red-400 mb-5 sm:mb-6 border-b border-red-500/20 pb-4">❌ Ir por tu cuenta</h3>
-                    <ul class="space-y-5 sm:space-y-6 text-gray-400">
-                        <li class="flex gap-3 sm:gap-4 items-start"><span class="mt-1">⚠️</span> <span>Pierdes mañanas enteras pidiendo cita banco por banco.</span></li>
-                        <li class="flex gap-3 sm:gap-4 items-start"><span class="mt-1">⚠️</span> <span>Te ofrecen productos vinculados caros y obligatorios.</span></li>
-                        <li class="flex gap-3 sm:gap-4 items-start"><span class="mt-1">⚠️</span> <span>Máximo del 80% de financiación con límites estrictos.</span></li>
+            <div class="text-center mb-16 reveal">
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4 text-navy-900">La diferencia es clara</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+                <div class="compare-card bg-white p-10 border-2 border-red-100 reveal">
+                    <h3 class="font-heading text-2xl font-bold text-red-600 mb-6 border-b border-red-100 pb-4">❌ Ir por tu cuenta</h3>
+                    <ul class="space-y-6 text-navy-600">
+                        <li class="flex gap-4 items-start"><span class="mt-1 text-red-400">⚠️</span> <span>Pierdes mañanas enteras pidiendo cita banco por banco.</span></li>
+                        <li class="flex gap-4 items-start"><span class="mt-1 text-red-400">⚠️</span> <span>Te ofrecen productos vinculados caros y obligatorios.</span></li>
+                        <li class="flex gap-4 items-start"><span class="mt-1 text-red-400">⚠️</span> <span>Máximo del 80% de financiación con límites estrictos.</span></li>
                     </ul>
                 </div>
-                <div class="bento-card p-6 sm:p-10 border-brand-400/40 transform md:scale-105 shadow-2xl shadow-brand-500/20 bg-slate-800/80">
-                    <h3 class="text-xl sm:text-2xl font-bold text-brand-400 mb-5 sm:mb-6 border-b border-brand-500/20 pb-4">✅ Con Financiación Hipoteca</h3>
-                    <ul class="space-y-5 sm:space-y-6 text-gray-200">
-                        <li class="flex gap-3 sm:gap-4 items-start"><span class="mt-1">🚀</span> <span>Gestión 100% digital o personalizada, a tu ritmo.</span></li>
-                        <li class="flex gap-3 sm:gap-4 items-start"><span class="mt-1">🚀</span> <span>Negociamos y eliminamos las bonificaciones trampa por ti.</span></li>
-                        <li class="flex gap-3 sm:gap-4 items-start"><span class="mt-1">🚀</span> <span>Opciones reales de hasta el 100% financiando todo.</span></li>
+                <div class="compare-card bg-navy-900 p-10 text-white transform md:scale-105 shadow-2xl reveal">
+                    <h3 class="font-heading text-2xl font-bold text-gold-400 mb-6 border-b border-navy-700 pb-4">✅ Con Financiación Hipoteca</h3>
+                    <ul class="space-y-6 text-navy-200">
+                        <li class="flex gap-4 items-start"><span class="mt-1 text-gold-400">🚀</span> <span>Gestión 100% digital o personalizada, a tu ritmo.</span></li>
+                        <li class="flex gap-4 items-start"><span class="mt-1 text-gold-400">🚀</span> <span>Negociamos y eliminamos las bonificaciones trampa por ti.</span></li>
+                        <li class="flex gap-4 items-start"><span class="mt-1 text-gold-400">🚀</span> <span>Opciones reales de hasta el 100% financiando todo.</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Imagen decorativa -->
+    <div class="img-section h-64 md:h-80" style="background-image: url('https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=2000');">
+        <div class="h-full bg-white/20 backdrop-blur-[1px]"></div>
+    </div>
 
     <!-- Blog & Guías SEO -->
-    <section class="py-16 sm:py-24 bg-[#0a1120] relative">
+    <section class="py-24 bg-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 sm:mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Guías Financieras</h2>
-                <p class="text-gray-400 text-base sm:text-lg">Información transparente para tomar la mejor decisión con tu nueva casa.</p>
+            <div class="text-center mb-16 reveal">
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4 text-navy-900">Guías Financieras</h2>
+                <p class="text-navy-500 text-lg">Información transparente para tomar la mejor decisión con tu nueva casa.</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-                <!-- Articulo 1 -->
-                <article class="bento-card p-6 sm:p-8 flex flex-col h-full bg-slate-800/50">
-                    <div class="mb-4 text-brand-400 text-sm font-bold tracking-wider uppercase">Hipoteca 100%</div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-4 line-clamp-2">Cómo conseguir el 100% de financiación en 2026</h3>
-                    <p class="text-gray-400 mb-6 flex-grow line-clamp-3">Los bancos suelen dar hasta el 80%, pero existen métodos y perfiles que aseguran la financiación total. Te contamos los secretos del sector.</p>
-                    <button onclick="document.getElementById('modal-blog-1').classList.add('open')" class="text-brand-400 font-bold hover:text-white transition flex items-center gap-2 mt-auto">
-                        Leer artículo completo <span class="text-xl">→</span>
-                    </button>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="blog-card reveal">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&q=80&w=800" alt="Hipoteca 100%" class="blog-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-3 text-gold-600 text-sm font-bold tracking-wider uppercase">Hipoteca 100%</div>
+                        <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">Cómo conseguir el 100% de financiación en 2026</h3>
+                        <p class="text-navy-500 mb-6">Los bancos suelen dar hasta el 80%, pero existen métodos y perfiles que aseguran la financiación total.</p>
+                        <button onclick="document.getElementById('modal-blog-1').classList.add('open')" class="text-gold-600 font-bold hover:text-navy-900 transition flex items-center gap-2">Leer artículo <span class="text-xl">→</span></button>
+                    </div>
                 </article>
-                <!-- Articulo 2 -->
-                <article class="bento-card p-6 sm:p-8 flex flex-col h-full bg-slate-800/50">
-                    <div class="mb-4 text-emerald-400 text-sm font-bold tracking-wider uppercase">Ahorro y Gastos</div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-4 line-clamp-2">Gastos de compraventa: Cuánto necesitas ahorrar</h3>
-                    <p class="text-gray-400 mb-6 flex-grow line-clamp-3">Notaría, registro, tasación, impuestos... Desglosamos cada gasto para que no te lleves sustos al firmar.</p>
-                    <button onclick="document.getElementById('modal-blog-2').classList.add('open')" class="text-emerald-400 font-bold hover:text-white transition flex items-center gap-2 mt-auto">
-                        Leer artículo completo <span class="text-xl">→</span>
-                    </button>
+                <article class="blog-card reveal">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=800" alt="Ahorro" class="blog-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-3 text-emerald-600 text-sm font-bold tracking-wider uppercase">Ahorro y Gastos</div>
+                        <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">Gastos de compraventa: Cuánto necesitas ahorrar</h3>
+                        <p class="text-navy-500 mb-6">Notaría, registro, tasación, impuestos... Desglosamos cada gasto para que no te lleves sustos.</p>
+                        <button onclick="document.getElementById('modal-blog-2').classList.add('open')" class="text-emerald-600 font-bold hover:text-navy-900 transition flex items-center gap-2">Leer artículo <span class="text-xl">→</span></button>
+                    </div>
                 </article>
-                <!-- Articulo 3 -->
-                <article class="bento-card p-6 sm:p-8 flex flex-col h-full bg-slate-800/50">
-                    <div class="mb-4 text-amber-400 text-sm font-bold tracking-wider uppercase">Tipos de Interés</div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-4 line-clamp-2">¿Fija, Variable o Mixta? Qué elegir este año</h3>
-                    <p class="text-gray-400 mb-6 flex-grow line-clamp-3">El Euribor cambia y los bancos ajustan sus ofertas. Descubre qué tipo de hipoteca y riesgo se adapta mejor a tu economía a largo plazo.</p>
-                    <button onclick="document.getElementById('modal-blog-3').classList.add('open')" class="text-amber-400 font-bold hover:text-white transition flex items-center gap-2 mt-auto">
-                        Leer artículo completo <span class="text-xl">→</span>
-                    </button>
+                <article class="blog-card reveal">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?auto=format&fit=crop&q=80&w=800" alt="Tipos de Interés" class="blog-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-3 text-amber-600 text-sm font-bold tracking-wider uppercase">Tipos de Interés</div>
+                        <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">¿Fija, Variable o Mixta? Qué elegir este año</h3>
+                        <p class="text-navy-500 mb-6">Descubre qué tipo de hipoteca y riesgo se adapta mejor a tu economía a largo plazo.</p>
+                        <button onclick="document.getElementById('modal-blog-3').classList.add('open')" class="text-amber-600 font-bold hover:text-navy-900 transition flex items-center gap-2">Leer artículo <span class="text-xl">→</span></button>
+                    </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Contacto Moderno -->
-    <section id="contacto" class="py-16 sm:py-24 bg-dark-900 relative overflow-hidden">
-        <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-brand-500/10 blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 rounded-full bg-blue-600/10 blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-3xl mx-auto px-4 relative z-10">
-            <div class="glass p-6 sm:p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
-                <div class="text-center mb-8 sm:mb-10">
-                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Inicia tu estudio gratuito</h2>
-                    <p class="text-gray-400 text-base sm:text-lg">Déjanos tus datos de contacto y trazamos una estrategia en 24 horas.</p>
+    <!-- FAQ -->
+    <section class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-16 reveal">
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4 text-navy-900">Preguntas frecuentes</h2>
+            </div>
+            <div class="reveal">
+                <div class="faq-item cursor-pointer py-6" onclick="this.classList.toggle('open')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-heading text-lg font-bold text-navy-900">¿El estudio de viabilidad es realmente gratuito?</h3>
+                        <span class="faq-arrow text-navy-400 text-2xl">↓</span>
+                    </div>
+                    <div class="faq-answer text-navy-500 leading-relaxed">Sí, al 100%. No cobramos nada por analizar tu caso y decirte si es viable. Solo si decides seguir adelante con nosotros y firmamos un mandato, aplicaremos nuestros honorarios, que siempre serán transparentes y pactados de antemano.</div>
                 </div>
+                <div class="faq-item cursor-pointer py-6" onclick="this.classList.toggle('open')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-heading text-lg font-bold text-navy-900">¿De verdad puedo conseguir el 100% de financiación?</h3>
+                        <span class="faq-arrow text-navy-400 text-2xl">↓</span>
+                    </div>
+                    <div class="faq-answer text-navy-500 leading-relaxed">Depende de tu perfil, pero sí es posible. Funcionarios, parejas con nóminas sólidas, o la aportación de un aval pueden abrir esta puerta. Nosotros conocemos las entidades que más flexibilizan este requisito.</div>
+                </div>
+                <div class="faq-item cursor-pointer py-6" onclick="this.classList.toggle('open')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-heading text-lg font-bold text-navy-900">¿Podéis mejorar las condiciones de mi hipoteca actual?</h3>
+                        <span class="faq-arrow text-navy-400 text-2xl">↓</span>
+                    </div>
+                    <div class="faq-answer text-navy-500 leading-relaxed">Absolutamente. Si tu tipo de interés es más alto que los actuales del mercado, tramitamos la subrogación para que pagues menos cada mes. Te hacemos un estudio comparativo sin compromiso.</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <form id="contactForm" class="text-left space-y-5 sm:space-y-6">
+    <!-- Contacto -->
+    <section id="contacto" class="py-24 bg-cream relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-gold-100/50 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 rounded-full bg-navy-100/30 blur-3xl pointer-events-none"></div>
+        <div class="max-w-3xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-10 reveal">
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-heading text-3xl lg:text-4xl font-bold mb-4 text-navy-900">Inicia tu estudio gratuito</h2>
+                <p class="text-navy-500 text-lg">Déjanos tus datos de contacto y trazamos una estrategia en 24 horas.</p>
+            </div>
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 reveal">
+                <form id="contactForm" class="text-left space-y-6">
                     <input type="hidden" name="access_key" value="f0592298-dd1f-41bd-8cf3-1f870686bea9">
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Nombre completo</label>
-                            <input type="text" name="name" required autocomplete="name" class="w-full px-4 sm:px-5 py-3 sm:py-4 text-base rounded-xl focus:ring-2 focus:ring-brand-400 transition bg-dark-900" placeholder="Tu nombre">
+                            <label class="block text-sm font-medium text-navy-600 mb-2">Nombre completo</label>
+                            <input type="text" name="name" required class="w-full px-5 py-4" placeholder="Tu nombre">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Teléfono</label>
-                            <input type="tel" name="phone" required autocomplete="tel" inputmode="tel" class="w-full px-4 sm:px-5 py-3 sm:py-4 text-base rounded-xl focus:ring-2 focus:ring-brand-400 transition bg-dark-900" placeholder="600 000 000">
+                            <label class="block text-sm font-medium text-navy-600 mb-2">Teléfono</label>
+                            <input type="tel" name="phone" required class="w-full px-5 py-4" placeholder="600 000 000">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-2">Mensaje (opcional)</label>
-                        <textarea name="message" rows="3" class="w-full px-4 sm:px-5 py-3 sm:py-4 text-base rounded-xl focus:ring-2 focus:ring-brand-400 transition bg-dark-900" placeholder="¿Qué buscas? (Ej: Compra vivienda habitual, mejorar tipo de interés...)"></textarea>
+                        <label class="block text-sm font-medium text-navy-600 mb-2">Mensaje (opcional)</label>
+                        <textarea name="message" rows="3" class="w-full px-5 py-4" placeholder="¿Qué buscas? (Ej: Compra vivienda habitual, mejorar tipo de interés...)"></textarea>
                     </div>
-                    
-                    <div class="flex items-start gap-3 mt-4 bg-dark-900/50 p-4 rounded-xl border border-white/5">
-                        <input type="checkbox" id="privacy" required class="mt-1 w-5 h-5 text-brand-500 rounded border-gray-600 bg-dark-800 focus:ring-brand-500 focus:ring-offset-dark-900">
-                        <div class="text-sm text-gray-400">
+                    <div class="flex items-start gap-3 mt-4 bg-warmwhite p-4 rounded-xl border border-gray-100">
+                        <input type="checkbox" id="privacy" required class="mt-1 w-5 h-5 text-gold-500 rounded border-gray-300 focus:ring-gold-500">
+                        <div class="text-sm text-navy-500">
                             He leído y acepto la 
-                            <button type="button" onclick="document.getElementById('modal-privacidad').classList.add('open')" class="text-brand-400 hover:text-brand-300 font-medium">POLÍTICA DE PRIVACIDAD</button>.
-                            
-                            <div class="mt-3 text-xs leading-relaxed border-t border-white/10 pt-3">
-                                <strong class="text-gray-300">Responsable:</strong> Financiación Hipoteca.<br>
-                                <strong class="text-gray-300">Finalidad:</strong> Estudio de viabilidad y contacto comercial.<br>
-                                <strong class="text-gray-300">Derechos:</strong> Acceso, rectificación y revocación en la política detallada.
+                            <button type="button" onclick="document.getElementById('modal-privacidad').classList.add('open')" class="text-gold-600 hover:text-gold-700 font-semibold underline">POLÍTICA DE PRIVACIDAD</button>.
+                            <div class="mt-3 text-xs leading-relaxed border-t border-gray-100 pt-3 text-navy-400">
+                                <strong class="text-navy-600">Responsable:</strong> Financiación Hipoteca.<br>
+                                <strong class="text-navy-600">Finalidad:</strong> Estudio de viabilidad y contacto comercial.<br>
+                                <strong class="text-navy-600">Derechos:</strong> Acceso, rectificación y revocación en la política detallada.
                             </div>
                         </div>
                     </div>
-
-                    <button type="submit" id="submitBtn" class="w-full btn-glow bg-gradient-to-r from-brand-600 to-brand-400 text-white font-bold py-3.5 sm:py-4 px-3 rounded-xl text-base sm:text-lg hover:shadow-lg hover:shadow-brand-500/40 transition-all">
-                        Enviar solicitud confidencial
-                    </button>
-                    
-                    <!-- Notificaciones -->
-                    <div id="successMsg" class="hidden mt-4 p-5 bg-emerald-900/40 border border-emerald-500/50 rounded-xl text-emerald-400 text-center font-medium shadow-lg shadow-emerald-900/20">
-                        ✅ ¡Mensaje cifrado y enviado! Nos pondremos en contacto contigo lo antes posible.
-                    </div>
-                    <div id="errorMsg" class="hidden mt-4 p-5 bg-red-900/40 border border-red-500/50 rounded-xl text-red-400 text-center font-medium">
-                        ❌ Error en la red. Llámanos directamente al 678 65 29 25.
-                    </div>
+                    <button type="submit" id="submitBtn" class="w-full btn-primary py-4 text-lg">Enviar solicitud confidencial</button>
+                    <div id="successMsg" class="hidden mt-4 p-5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-700 text-center font-medium">✅ ¡Mensaje enviado! Nos pondremos en contacto contigo lo antes posible.</div>
+                    <div id="errorMsg" class="hidden mt-4 p-5 bg-red-50 border border-red-200 rounded-xl text-red-600 text-center font-medium">❌ Error en la red. Llámanos directamente al 678 65 29 25.</div>
                 </form>
+            </div>
+            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-6 text-center reveal">
+                <a href="tel:+34678652925" class="flex items-center justify-center gap-2 text-navy-700 hover:text-gold-600 transition font-medium">📞 678 65 29 25</a>
+                <a href="mailto:dsanz@gestorescom.es" class="flex items-center justify-center gap-2 text-navy-700 hover:text-gold-600 transition font-medium">✉️ dsanz@gestorescom.es</a>
+                <a href="https://wa.me/34678652925" target="_blank" class="flex items-center justify-center gap-2 text-navy-700 hover:text-gold-600 transition font-medium">💬 WhatsApp</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-white/5 pt-12 sm:pt-16 pb-8">
+    <footer class="bg-navy-900 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-8 sm:mb-10">
-                <div class="text-2xl sm:text-3xl font-bold mb-5 sm:mb-6 text-white tracking-tight">Financiación <span class="text-brand-400">Hipoteca</span></div>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-8 mb-6 sm:mb-8">
-                    <a href="tel:+34678652925" class="text-gray-400 hover:text-brand-400 transition text-base sm:text-lg font-medium">📞 678 65 29 25</a>
-                    <a href="mailto:dsanz@gestorescom.es" class="text-gray-400 hover:text-brand-400 transition text-base sm:text-lg font-medium break-all sm:break-normal">✉️ dsanz@gestorescom.es</a>
+            <div class="text-center mb-10">
+                <div class="flex items-center justify-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center font-bold text-lg text-navy-900">FH</div>
+                    <span class="font-heading font-bold text-2xl text-white">Financiación <span class="text-gold-400">Hipoteca</span></span>
+                </div>
+                <div class="flex justify-center items-center gap-8 mb-8">
+                    <a href="tel:+34678652925" class="text-navy-300 hover:text-gold-400 transition text-lg font-medium">📞 678 65 29 25</a>
+                    <a href="mailto:dsanz@gestorescom.es" class="text-navy-300 hover:text-gold-400 transition text-lg font-medium">✉️ dsanz@gestorescom.es</a>
                 </div>
             </div>
-
-            <div class="border-t border-white/10 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
-                <p class="text-gray-600 text-xs sm:text-sm">© 2024 Financiación Hipoteca. Todos los derechos reservados.</p>
-                <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm text-gray-500">
-                    <button onclick="document.getElementById('modal-aviso').classList.add('open')" class="hover:text-brand-400 transition">Aviso Legal</button>
-                    <button onclick="document.getElementById('modal-privacidad').classList.add('open')" class="hover:text-brand-400 transition">Privacidad</button>
-                    <button onclick="document.getElementById('modal-cookies').classList.add('open')" class="hover:text-brand-400 transition">Cookies</button>
+            <div class="border-t border-navy-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-navy-500 text-sm">© 2026 Financiación Hipoteca. Todos los derechos reservados.</p>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-navy-400">
+                    <button onclick="document.getElementById('modal-aviso').classList.add('open')" class="hover:text-gold-400 transition">Aviso Legal</button>
+                    <button onclick="document.getElementById('modal-privacidad').classList.add('open')" class="hover:text-gold-400 transition">Privacidad</button>
+                    <button onclick="document.getElementById('modal-cookies').classList.add('open')" class="hover:text-gold-400 transition">Cookies</button>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Modals (Iguales en texto legal, adaptadas en CSS al modo oscuro) -->
-    <!-- Aviso Legal -->
-    <div id="modal-aviso" class="modal fixed inset-0 z-[100] bg-black/80 backdrop-blur-md items-center justify-center p-3 sm:p-4">
-        <div class="bg-dark-900 border border-white/10 p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl max-w-2xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-y-auto shadow-2xl">
-            <div class="flex justify-between items-center gap-3 mb-6 sm:mb-8 border-b border-white/10 pb-4">
-                <h2 class="text-xl sm:text-2xl font-bold text-white">Aviso Legal</h2>
-                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-500 hover:text-white text-3xl leading-none transition shrink-0 w-10 h-10 flex items-center justify-center -mr-2">&times;</button>
+    <!-- Modal Aviso Legal -->
+    <div id="modal-aviso" class="modal fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm items-center justify-center p-4">
+        <div class="bg-white p-8 md:p-10 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+            <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-4">
+                <h2 class="font-heading text-2xl font-bold text-navy-900">Aviso Legal</h2>
+                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-400 hover:text-navy-900 text-3xl transition">&times;</button>
             </div>
-            <div class="text-gray-300 space-y-5 text-sm leading-relaxed">
+            <div class="text-navy-600 space-y-5 text-sm leading-relaxed">
                 <p>En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información, se exponen los siguientes datos:</p>
-                <div class="glass p-5 rounded-xl border border-white/5">
+                <div class="bg-warmwhite p-5 rounded-xl border border-gray-100">
                     <strong>Titular:</strong> Financiación Hipoteca (bajo la titularidad de Daniel Sanz Lairado)<br>
                     <strong>NIF:</strong> 46888105y<br>
                     <strong>Domicilio:</strong> Calle Magnolio 7, Móstoles<br>
@@ -371,33 +507,33 @@
         </div>
     </div>
 
-    <!-- Privacidad -->
-    <div id="modal-privacidad" class="modal fixed inset-0 z-[100] bg-black/80 backdrop-blur-md items-center justify-center p-3 sm:p-4">
-        <div class="bg-dark-900 border border-white/10 p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl max-w-2xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-y-auto shadow-2xl">
-            <div class="flex justify-between items-center gap-3 mb-6 sm:mb-8 border-b border-white/10 pb-4">
-                <h2 class="text-xl sm:text-2xl font-bold text-white">Política de Privacidad</h2>
-                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-500 hover:text-white text-3xl leading-none transition shrink-0 w-10 h-10 flex items-center justify-center -mr-2">&times;</button>
+    <!-- Modal Privacidad -->
+    <div id="modal-privacidad" class="modal fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm items-center justify-center p-4">
+        <div class="bg-white p-8 md:p-10 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+            <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-4">
+                <h2 class="font-heading text-2xl font-bold text-navy-900">Política de Privacidad</h2>
+                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-400 hover:text-navy-900 text-3xl transition">&times;</button>
             </div>
-            <div class="text-gray-300 space-y-5 text-sm leading-relaxed">
-                <p><span class="text-brand-400 font-bold">Responsable:</span> Financiación Hipoteca (marca comercial titularidad de Daniel Sanz Lairado, con email dsanz@gestorescom.es).</p>
-                <p><span class="text-brand-400 font-bold">Finalidad:</span> Los datos se recogen exclusivamente para realizar el estudio de viabilidad hipotecario gratuito y contactar con el usuario para resolver su solicitud particular.</p>
-                <p><span class="text-brand-400 font-bold">Legitimación:</span> Consentimiento expreso del interesado al marcar la casilla de verificación y enviar el formulario de captura.</p>
-                <p><span class="text-brand-400 font-bold">Destinatarios:</span> Sus datos NO se cederán a organismos bancarios ni a intermediarios de terceros sin la firma de un mandato o autorización previa por escrito. Quedan blindados a nivel de consultoría interna.</p>
-                <p><span class="text-brand-400 font-bold">Derechos:</span> Puede ejercer sus derechos normativos (ARCO) de acceso, rectificación, cancelación y oposición escribiendo un correo directo a dsanz@gestorescom.es.</p>
+            <div class="text-navy-600 space-y-5 text-sm leading-relaxed">
+                <p><span class="text-gold-600 font-bold">Responsable:</span> Financiación Hipoteca (marca comercial titularidad de Daniel Sanz Lairado, con email dsanz@gestorescom.es).</p>
+                <p><span class="text-gold-600 font-bold">Finalidad:</span> Los datos se recogen exclusivamente para realizar el estudio de viabilidad hipotecario gratuito y contactar con el usuario para resolver su solicitud particular.</p>
+                <p><span class="text-gold-600 font-bold">Legitimación:</span> Consentimiento expreso del interesado al marcar la casilla de verificación y enviar el formulario de captura.</p>
+                <p><span class="text-gold-600 font-bold">Destinatarios:</span> Sus datos NO se cederán a organismos bancarios ni a intermediarios de terceros sin la firma de un mandato o autorización previa por escrito.</p>
+                <p><span class="text-gold-600 font-bold">Derechos:</span> Puede ejercer sus derechos normativos (ARCO) de acceso, rectificación, cancelación y oposición escribiendo un correo directo a dsanz@gestorescom.es.</p>
             </div>
         </div>
     </div>
 
-    <!-- Cookies -->
-    <div id="modal-cookies" class="modal fixed inset-0 z-[100] bg-black/80 backdrop-blur-md items-center justify-center p-3 sm:p-4">
-        <div class="bg-dark-900 border border-white/10 p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl max-w-2xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-y-auto shadow-2xl">
-            <div class="flex justify-between items-center gap-3 mb-6 sm:mb-8 border-b border-white/10 pb-4">
-                <h2 class="text-xl sm:text-2xl font-bold text-white">Política de Cookies</h2>
-                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-500 hover:text-white text-3xl leading-none transition shrink-0 w-10 h-10 flex items-center justify-center -mr-2">&times;</button>
+    <!-- Modal Cookies -->
+    <div id="modal-cookies" class="modal fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm items-center justify-center p-4">
+        <div class="bg-white p-8 md:p-10 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+            <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-4">
+                <h2 class="font-heading text-2xl font-bold text-navy-900">Política de Cookies</h2>
+                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-400 hover:text-navy-900 text-3xl transition">&times;</button>
             </div>
-            <div class="text-gray-300 space-y-4 text-sm leading-relaxed">
+            <div class="text-navy-600 space-y-4 text-sm leading-relaxed">
                 <p>Nuestra web utiliza cookies propias y de terceros para entender cómo interactúas con nosotros, crear una experiencia segura y analizar estadísticas bajo anonimato.</p>
-                <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-400 tracking-wide">
+                <ul class="list-disc pl-5 mt-2 space-y-2 text-navy-500">
                     <li><strong>Técnicas:</strong> Necesarias para mover la web y que visualices los formatos adaptados.</li>
                     <li><strong>Analíticas:</strong> Nos sirven para contabilizar métricas generales.</li>
                 </ul>
@@ -405,143 +541,122 @@
         </div>
     </div>
 
-    <!-- Blog Modals -->
-    <!-- Modal 1 -->
-    <div id="modal-blog-1" class="modal fixed inset-0 z-[100] bg-black/80 backdrop-blur-md items-center justify-center p-3 sm:p-4">
-        <div class="bg-dark-900 border border-white/10 p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl max-w-3xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-y-auto shadow-2xl">
-            <div class="flex justify-between items-start gap-3 mb-6 sm:mb-8 border-b border-white/10 pb-4">
-                <h3 class="text-lg sm:text-2xl font-bold text-white leading-tight">Cómo conseguir el 100% de tu hipoteca en 2026</h3>
-                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-500 hover:text-white text-3xl leading-none transition shrink-0 w-10 h-10 flex items-center justify-center -mr-2 -mt-1">&times;</button>
+    <!-- Modals Blog -->
+    <div id="modal-blog-1" class="modal fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm items-center justify-center p-4">
+        <div class="bg-white p-8 md:p-10 rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+            <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-4">
+                <h3 class="font-heading text-2xl font-bold text-navy-900">Cómo conseguir el 100% de tu hipoteca en 2026</h3>
+                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-400 hover:text-navy-900 text-3xl transition">&times;</button>
             </div>
-            <div class="text-gray-300 space-y-5 text-[15px] leading-relaxed">
-                <p>Es la gran pregunta que se hacen muchos compradores: <strong>¿Es posible financiar el total de la vivienda?</strong> Sí, aunque los bancos tradicionales tienen por norma general prestar un máximo del 80% sobre el menor valor (entre precio de compra y tasación), existen opciones viables si cuentas con el asesoramiento adecuado.</p>
-                <h4 class="text-lg font-bold text-brand-400 pt-3">1. Perfil financiero de alto nivel (Funcionarios / Indefinidos sólidos)</h4>
-                <p>Las entidades financieras adoran la estabilidad. Si eres funcionario con plaza, la seguridad de tus ingresos puede abrirte las puertas al 100%. Lo mismo aplica para parejas donde ambos tienen contratos indefinidos sólidos, buenas nóminas y un historial impoluto.</p>
-                <h4 class="text-lg font-bold text-brand-400 pt-3">2. Viviendas de bancos (Fondos de la propia entidad)</h4>
-                <p>Los bancos quieren dar salida a sus propios inmuebles embargados o de fondos propios (Servicers). Para incentivar su venta, son los únicos escenarios donde ellos mismos te ofrecen el 100% financiando, a veces, incluso parte de los gastos mediante cuotas muy flexibles.</p>
-                <h4 class="text-lg font-bold text-brand-400 pt-3">3. Uso de Doble Garantía (Aval)</h4>
-                <p>Si no tienes ahorrado el 20%, aportar una vivienda libre de cargas (de tus padres o de un familiar directo) es la opción clásica. Solo respondes con esa casa por ese 20% inicial de riesgo, que además puede liberarse a los pocos años cuando el capital descienda.</p>
-                <h4 class="text-lg font-bold text-brand-400 pt-3">4. La figura del Bróker o Intermediario</h4>
-                <p>Esta es tu mejor baza. Mientras que un particular acudiendo a su sucursal de barrio obtiene un "no" por sistema, <strong>en Financiación Hipoteca contamos con canales exclusivos</strong>. Negociamos volúmenes inmensos con riesgo bancario central, lo que nos permite acceso a líneas del 100% siempre que haya un soporte estable detrás.</p>
-                <div class="mt-8 p-6 glass rounded-2xl border border-brand-500/30 text-center">
-                    <p class="font-bold text-white mb-3">¿Crees que puedes encajar en estas opciones?</p>
-                    <button onclick="document.getElementById('modal-blog-1').classList.remove('open'); document.getElementById('contacto').scrollIntoView();" class="px-6 py-3 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-400 transition">Solicitar mi Estudio de Viabilidad</button>
+            <div class="text-navy-600 space-y-5 text-[15px] leading-relaxed">
+                <p>Es la gran pregunta que se hacen muchos compradores: <strong>¿Es posible financiar el total de la vivienda?</strong> Sí, aunque los bancos tradicionales tienen por norma general prestar un máximo del 80%, existen opciones viables si cuentas con el asesoramiento adecuado.</p>
+                <h4 class="font-heading text-lg font-bold text-gold-700 pt-3">1. Perfil financiero de alto nivel</h4>
+                <p>Las entidades financieras adoran la estabilidad. Si eres funcionario con plaza, la seguridad de tus ingresos puede abrirte las puertas al 100%.</p>
+                <h4 class="font-heading text-lg font-bold text-gold-700 pt-3">2. Viviendas de bancos</h4>
+                <p>Los bancos quieren dar salida a sus propios inmuebles. Para incentivar su venta, son los únicos escenarios donde ofrecen el 100% financiando, a veces, incluso parte de los gastos.</p>
+                <h4 class="font-heading text-lg font-bold text-gold-700 pt-3">3. Uso de Doble Garantía (Aval)</h4>
+                <p>Si no tienes ahorrado el 20%, aportar una vivienda libre de cargas es la opción clásica para conseguir el 100%.</p>
+                <div class="mt-8 p-6 bg-warmwhite rounded-2xl border border-gold-200 text-center">
+                    <p class="font-bold text-navy-900 mb-3">¿Crees que puedes encajar en estas opciones?</p>
+                    <button onclick="document.getElementById('modal-blog-1').classList.remove('open'); document.getElementById('contacto').scrollIntoView();" class="btn-primary px-6 py-3">Solicitar mi Estudio de Viabilidad</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal 2 -->
-    <div id="modal-blog-2" class="modal fixed inset-0 z-[100] bg-black/80 backdrop-blur-md items-center justify-center p-3 sm:p-4">
-        <div class="bg-dark-900 border border-white/10 p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl max-w-3xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-y-auto shadow-2xl">
-            <div class="flex justify-between items-start gap-3 mb-6 sm:mb-8 border-b border-white/10 pb-4">
-                <h3 class="text-lg sm:text-2xl font-bold text-white leading-tight">Gastos de compraventa: Cuánto necesitas ahorrar</h3>
-                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-500 hover:text-white text-3xl leading-none transition shrink-0 w-10 h-10 flex items-center justify-center -mr-2 -mt-1">&times;</button>
+    <div id="modal-blog-2" class="modal fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm items-center justify-center p-4">
+        <div class="bg-white p-8 md:p-10 rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+            <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-4">
+                <h3 class="font-heading text-2xl font-bold text-navy-900">Gastos de compraventa: Cuánto necesitas ahorrar</h3>
+                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-400 hover:text-navy-900 text-3xl transition">&times;</button>
             </div>
-            <div class="text-gray-300 space-y-5 text-[15px] leading-relaxed">
-                <p>Uno de los errores más comunes al comprar una casa es olvidar <strong>los gastos asociados</strong>. De media, necesitas tener ahorrado entre un <strong>10% y un 12% del valor de compra</strong>, solo para cubrir gastos (independientemente del 20% inicial si el banco solo da el 80%).</p>
-                <h4 class="text-lg font-bold text-emerald-400 pt-3">Impuestos: La mayor parte</h4>
-                <p>Si es <strong>vivienda nueva (Obra Nueva):</strong> Pagarás un 10% de IVA a nivel nacional, más IAJD (Impuesto de Actos Jurídicos Documentados) que varía entre un 0,5% y un 1,5% dependiendo de tu Comunidad Autónoma.</p>
-                <p>Si es <strong>vivienda de segunda mano:</strong> Se abona el ITP (Impuesto de Transmisiones Patrimoniales), que oscila entre un 6% y un 10% según el territorio y las bonificaciones (p. ej., jóvenes menores de 35 años o familias numerosas).</p>
-                <h4 class="text-lg font-bold text-emerald-400 pt-3">Gastos de Notaría</h4>
-                <p>Al firmar la escritura pública, hay unos gastos pautados por ley (aranceles notariales). Estos varían en función de la extensión del contrato, del precio, etc. pero suelen rondar entre los 600€ y 900€.</p>
-                <h4 class="text-lg font-bold text-emerald-400 pt-3">Gastos de Registro y Gestoría</h4>
-                <p>Comprar una casa implica inscribirla a tu nombre en el Registro de la Propiedad, lo que supone un gasto de unos 400€ - 600€. La gestoría que tramita la liquidación de impuestos para el banco cobra honorarios que oscilan los 300€ - 500€.</p>
-                <h4 class="text-lg font-bold text-emerald-400 pt-3">Con la Hipoteca 100%, ¿solo necesito el 10% de gastos?</h4>
-                <p>Generalmente sí. Al conseguirte el 100% del valor de compraventa, tus ahorros pueden enfocarse íntegramente en cubrir estas partidas fiscales obligatorias. En casos ultrarreducidos de excelencia, podríamos barajar englobarlos, pero la aportación del ahorro del gasto fiscal es el estándar para entrar.</p>
-                <div class="mt-8 p-6 glass rounded-2xl border border-emerald-500/30 text-center">
-                    <p class="font-bold text-white mb-3">Haz cuentas seguras, sin sorpresas</p>
+            <div class="text-navy-600 space-y-5 text-[15px] leading-relaxed">
+                <p>Uno de los errores más comunes al comprar una casa es olvidar <strong>los gastos asociados</strong>. De media, necesitas tener ahorrado entre un <strong>10% y un 12% del valor de compra</strong>, solo para cubrir gastos.</p>
+                <h4 class="font-heading text-lg font-bold text-emerald-700 pt-3">Impuestos: La mayor parte</h4>
+                <p>Si es <strong>vivienda nueva:</strong> Pagarás un 10% de IVA, más IAJD según tu Comunidad Autónoma. Si es <strong>segunda mano:</strong> Se abona el ITP, entre un 6% y un 10%.</p>
+                <h4 class="font-heading text-lg font-bold text-emerald-700 pt-3">Gastos de Notaría, Registro y Gestoría</h4>
+                <p>Al firmar la escritura pública hay gastos pautados por ley que suelen rondar entre los 600€ y 900€ en notaría, más 400€-600€ en registro y 300€-500€ en gestoría.</p>
+                <div class="mt-8 p-6 bg-warmwhite rounded-2xl border border-emerald-200 text-center">
+                    <p class="font-bold text-navy-900 mb-3">Haz cuentas seguras, sin sorpresas</p>
                     <button onclick="document.getElementById('modal-blog-2').classList.remove('open'); document.getElementById('contacto').scrollIntoView();" class="px-6 py-3 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-500 transition">Calculemos tus gastos juntos</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal 3 -->
-    <div id="modal-blog-3" class="modal fixed inset-0 z-[100] bg-black/80 backdrop-blur-md items-center justify-center p-3 sm:p-4">
-        <div class="bg-dark-900 border border-white/10 p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl max-w-3xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-y-auto shadow-2xl">
-            <div class="flex justify-between items-start gap-3 mb-6 sm:mb-8 border-b border-white/10 pb-4">
-                <h3 class="text-lg sm:text-2xl font-bold text-white leading-tight">¿Fija, Variable o Mixta? Qué elegir este año</h3>
-                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-500 hover:text-white text-3xl leading-none transition shrink-0 w-10 h-10 flex items-center justify-center -mr-2 -mt-1">&times;</button>
+    <div id="modal-blog-3" class="modal fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm items-center justify-center p-4">
+        <div class="bg-white p-8 md:p-10 rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+            <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-4">
+                <h3 class="font-heading text-2xl font-bold text-navy-900">¿Fija, Variable o Mixta? Qué elegir este año</h3>
+                <button onclick="this.closest('.modal').classList.remove('open')" class="text-gray-400 hover:text-navy-900 text-3xl transition">&times;</button>
             </div>
-            <div class="text-gray-300 space-y-5 text-[15px] leading-relaxed">
-                <p>Las subidas de tipos en Europa que causaron tanto pánico van trazando su curva, lo que ha generado una avalancha de dudas entre los compradores: <strong>¿Me ato a una hipoteca fija y duermo tranquilo, o apuesto por una mixta más económica ahora?</strong></p>
-                <h4 class="text-lg font-bold text-amber-400 pt-3">Hipoteca Fija: Tranquilidad Absoluta</h4>
-                <p>Se caracterizan por mantener <strong>la misma cuota mensual durante todos los años de vida del préstamo</strong> (hasta que termines de pagar). No te importa si el Euribor sube a las nubes, porque a ti la inflación no te descuadrará la cuota de la cuenta.</p>
-                <p class="text-sm text-gray-400 ml-4 border-l-2 border-brand-500 pl-3"><strong>Para quién:</strong> Perfiles conservadores que prefieren planificar a nivel presupuestario a 30 años sin sobresaltos.</p>
-                
-                <h4 class="text-lg font-bold text-amber-400 pt-3">Hipoteca Variable: Jugando con el Euríbor</h4>
-                <p>Consiste en un tipo básico fijo (diferencial) más el tipo clave dictado a nivel europeo (El índice EURIBOR). Si el Euribor está bajo, vas a pagar muy poco. Pero como suba de golpe, tu cuota mensual se dispara en la próxima revisión anual (o semestral).</p>
-                <p class="text-sm text-gray-400 ml-4 border-l-2 border-brand-500 pl-3"><strong>Para quién:</strong> Perfiles enfocados muy a corto plazo o que saben que liquidarán su hipoteca rápido mediante amortizaciones fuertes y asumen riesgos.</p>
-                
-                <h4 class="text-lg font-bold text-amber-400 pt-3">Hipoteca Mixta: El producto preferido hoy</h4>
-                <p>Una especie de escudo inteligente. Te ofrecen una etapa principal fija (5, 7, o 10 años) con una cuota bajísima. Durante ese tiempo estás ultra-protegido. Después pasa a ser variable. La ventaja es que evitas el riesgo a corto plazo, y al llegar al tramo variable debes mucho menos capital, por lo que una subida castigará mucho menos.</p>
-                
-                <h4 class="text-lg font-bold text-amber-400 pt-3">Nuestra Recomendación</h4>
-                <p>La mejor solución es hacer números, trazar tu amortización ideal en nuestro simulador y conseguir unas bonificaciones por vinculación perfectas para ti para derribar el tipo (TIN).</p>
-                <div class="mt-8 p-6 glass rounded-2xl border border-amber-500/30 text-center">
-                    <p class="font-bold text-white mb-3">Encontremos la que encaje con tu economía</p>
+            <div class="text-navy-600 space-y-5 text-[15px] leading-relaxed">
+                <p><strong>¿Me ato a una fija y duermo tranquilo, o apuesto por una mixta más económica ahora?</strong> Las subidas de tipos en Europa van trazando su curva y hay opciones para todos los perfiles.</p>
+                <h4 class="font-heading text-lg font-bold text-amber-700 pt-3">Hipoteca Fija</h4>
+                <p>Misma cuota mensual durante todos los años de vida del préstamo. No te importa si el Euribor sube.</p>
+                <h4 class="font-heading text-lg font-bold text-amber-700 pt-3">Hipoteca Variable</h4>
+                <p>Un tipo básico fijo más el EURIBOR. Si el Euribor está bajo, pagas muy poco. Pero si sube, tu cuota mensual se dispara.</p>
+                <h4 class="font-heading text-lg font-bold text-amber-700 pt-3">Hipoteca Mixta: El producto preferido hoy</h4>
+                <p>Etapa principal fija (5, 7 o 10 años) con cuota bajísima. Después pasa a ser variable cuando el mercado es más predecible.</p>
+                <div class="mt-8 p-6 bg-warmwhite rounded-2xl border border-amber-200 text-center">
+                    <p class="font-bold text-navy-900 mb-3">Encontremos la que encaje con tu economía</p>
                     <button onclick="document.getElementById('modal-blog-3').classList.remove('open'); document.getElementById('contacto').scrollIntoView();" class="px-6 py-3 bg-amber-600 text-white font-bold rounded-xl hover:bg-amber-500 transition">Pedir Estudio a Medida</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Banner Cookies Inferior -->
-    <div id="cookies-banner" class="fixed bottom-3 left-3 right-3 md:bottom-4 md:left-auto md:right-8 md:w-[450px] glass p-4 sm:p-6 rounded-2xl z-40 shadow-2xl shadow-black/50 border border-white/10 transition-all border-l-4 border-l-brand-500">
-        <h4 class="font-bold text-white mb-2 text-sm sm:text-base">Tu privacidad es importante</h4>
-        <p class="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-            Usamos cookies técnicas para la web y analíticas.
-            <button onclick="document.getElementById('modal-cookies').classList.add('open')" class="text-brand-400 hover:underline">Configuración e info</button>.
-        </p>
+    <!-- Banner Cookies -->
+    <div id="cookies-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 md:w-[450px] bg-white p-6 rounded-2xl z-40 shadow-2xl border border-gray-100 border-l-4 border-l-gold-500">
+        <h4 class="font-bold text-navy-900 mb-2">Tu privacidad es importante</h4>
+        <p class="text-sm text-navy-500 mb-4 leading-relaxed">Usamos cookies técnicas para la web y analíticas. <button onclick="document.getElementById('modal-cookies').classList.add('open')" class="text-gold-600 hover:underline">Configuración e info</button>.</p>
         <div class="flex gap-3">
-            <button onclick="document.getElementById('cookies-banner').style.display='none'" class="flex-1 py-2.5 text-sm font-medium text-white bg-white/10 hover:bg-white/20 rounded-xl transition">Rechazar</button>
-            <button onclick="document.getElementById('cookies-banner').style.display='none'" class="flex-1 py-2.5 text-sm font-bold bg-brand-500 hover:bg-brand-400 text-white rounded-xl transition shadow-lg shadow-brand-500/20">Aceptar todas</button>
+            <button onclick="document.getElementById('cookies-banner').style.display='none'" class="flex-1 py-2.5 text-sm font-medium text-navy-600 bg-gray-100 hover:bg-gray-200 rounded-xl transition">Rechazar</button>
+            <button onclick="document.getElementById('cookies-banner').style.display='none'" class="flex-1 py-2.5 text-sm font-bold bg-gold-500 hover:bg-gold-600 text-white rounded-xl transition shadow-lg shadow-gold-500/20">Aceptar todas</button>
         </div>
     </div>
 
-    <!-- Scripts Esenciales -->
     <script>
-        // 1. Carrusel 6s (Optimizado Cero Fallos)
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Carrusel 6s
         const items = document.querySelectorAll('.carousel-item');
         const texts = [
-            'Consigue hasta el <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-blue-500">100%</span> de tu hipoteca.',
-            'Tu casa, <span class="text-brand-400">más cerca</span> y más fácil.',
-            'Buscamos la <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-400">mejor opción</span> para ti.'
+            'Consigue hasta el <span class="text-gold-600">100%</span> de tu hipoteca.',
+            'Tu casa, <span class="text-gold-600">más cerca</span> y más fácil.',
+            'Buscamos la <span class="text-gold-600">mejor opción</span> para ti.'
         ];
         const textElement = document.querySelector('.slide-text');
-        
         let currentIdx = 0;
         setInterval(() => {
             items[currentIdx].classList.remove('active');
             let nextIdx = (currentIdx + 1) % items.length;
-            
             textElement.style.opacity = '0';
-            
             setTimeout(() => {
                 items[nextIdx].classList.add('active');
                 textElement.innerHTML = texts[nextIdx];
                 textElement.style.opacity = '1';
                 currentIdx = nextIdx;
-            }, 600); 
+            }, 600);
         }, 6000);
 
-        // 2. Formulario Seguro (Web3Forms + CORS Safe)
+        // Formulario Web3Forms
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const btn = document.getElementById('submitBtn');
             const success = document.getElementById('successMsg');
             const error = document.getElementById('errorMsg');
-            
             const originText = btn.innerHTML;
-            btn.innerHTML = 'Procesando seguro... ⏳';
+            btn.innerHTML = 'Procesando... ⏳';
             btn.disabled = true;
             success.classList.add('hidden');
             error.classList.add('hidden');
-
             const formData = new FormData(this);
             const plainFormData = Object.fromEntries(formData.entries());
-
             try {
                 const fetchFn = (typeof window.AiKit !== 'undefined' && window.AiKit.fetch) ? window.AiKit.fetch : fetch;
                 const response = await fetchFn('https://api.web3forms.com/submit', {
@@ -549,7 +664,6 @@
                     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                     body: JSON.stringify(plainFormData)
                 });
-
                 if (response.ok) {
                     success.classList.remove('hidden');
                     this.reset();
@@ -560,7 +674,6 @@
                     btn.disabled = false;
                 }
             } catch (err) {
-                console.error("Fetch Error:", err);
                 error.classList.remove('hidden');
                 btn.innerHTML = originText;
                 btn.disabled = false;
